@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>nekoae</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #000;
+    cursor: pointer;
+  }
+  .bg {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+</style>
+</head>
+<body>
+  <div class="bg"></div>
+
+  <!-- The audio element: preloaded, not autoplaying, just sitting ready -->
+  <audio id="sound" src="fubu.mp3" preload="auto"></audio>
+
+  <script>
+    // Grab a reference to the audio element by its id
+    const sound = document.getElementById('sound');
+
+    // Define what happens on a click
+    function playOnce() {
+      sound.play();
+      // Remove this listener after the first click so it doesn't
+      // restart the sound (or stack multiple plays) on every click after
+      document.removeEventListener('click', playOnce);
+    }
+
+    // Listen for a click ANYWHERE on the page (document = whole page)
+    document.addEventListener('click', playOnce);
+  </script>
+</body>
+</html>
