@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>nekoae</title>
+<title>nekoae | nkeoa | nkeoae</title>
+<meta name="description" content="nekoae (nkeoa, nkeoae) - personal site.">
 <style>
   html, body {
     margin: 0;
@@ -25,22 +26,14 @@
 <body>
   <div class="bg"></div>
 
-  <!-- The audio element: preloaded, not autoplaying, just sitting ready -->
   <audio id="sound" src="fubu.mp3" preload="auto"></audio>
 
   <script>
-    // Grab a reference to the audio element by its id
     const sound = document.getElementById('sound');
-
-    // Define what happens on a click
     function playOnce() {
       sound.play();
-      // Remove this listener after the first click so it doesn't
-      // restart the sound (or stack multiple plays) on every click after
       document.removeEventListener('click', playOnce);
     }
-
-    // Listen for a click ANYWHERE on the page (document = whole page)
     document.addEventListener('click', playOnce);
   </script>
 </body>
