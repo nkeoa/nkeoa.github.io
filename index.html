@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>nekoae</title>
+<title>nekoae | nkeoa | nkeoae</title>
+<meta name="description" content="nekoae (nkeoa, nkeoae) - personal site.">
 <style>
   html, body {
     margin: 0;
@@ -19,11 +20,23 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
+  }
+  .caption {
+    position: absolute;
+    bottom: 16px;
+    right: 20px;
+    color: rgba(255, 255, 255, 0.55);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.05em;
   }
 </style>
 </head>
 <body>
-  <div class="bg"></div>
+  <div class="bg">
+    <div class="caption">nekoae</div>
+  </div>
 
   <audio id="sound" src="fubu.mp3" preload="auto"></audio>
 
